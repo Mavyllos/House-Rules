@@ -85,31 +85,31 @@ $('form').submit(function(e) {
                         </p>
                         <a class="rulez-collapse" data-toggle="collapse" href="#rulez${objectId}" aria-expanded="false" aria-controls="rulez${objectId}"> View, Add, or Edit Rulez </a>
                         <ul>
-                          <div class="rulez" id="rulez${objectId}" aria-expanded="false">
+                          <div class="rulez collapse" id="rulez${objectId}" aria-expanded="false">
                             <div class="card card-block">
-                            <a  id="add">+</a></td>
-                            <table id="mytable" width="300" border="1" cellspacing="0" cellpadding="2">
-                            <tbody>
-                              <tr>
-                                <td>Rule Title</td>
-                              </tr>
-                              <tr class="Rule Title">
-                                <td><input type="text" name="title" id="title" /></td>
-                              </tr>
-                              <tr>
-                                <td>Rule Title</td>
-                              </tr>
-                              <tr class="Rule Title">
-                                <td><input type="text" name="title" id="title" /></td>
-                              </tr>
-                              <tr>
-                                <td>Rule Title</td>
-                              </tr>
-                              <tr class="Rule Title">
-                                <td><input type="text" name="title" id="title" /></td>
-                              </tr>
-                              </tbody>
-                            </table>
+                            <div id="rulezTableDiv">
+                            <br>
+                                <table id="rulezTable" border="1">
+                                    <tr>
+                                        <td>ID</td>
+                                        <td>Rule Title</td>
+                                        <td>Rule Text</td>
+                                        <td>Delete?</td>
+                                        <td>Add Rows?</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+
+                                        <td><input size=25 type="text" id="title" class="textFields"/></td>
+
+                                        <td><input size=25 type="text" id="ruleText" class="textFields"/></td>
+
+                                        <td><input type="button" id="delbutton" value="Delete" class="textFields" onclick="deleteRow(this)"/></td>
+
+                                        <td><input type="button" id="addmorebutton" class="textFields" value="Add More Rulez" onclick="insRow()"/></td>
+                                    </tr>
+                                </table>
+                            </div>
                             </div>
                           </div>
                         </ul>
@@ -117,22 +117,66 @@ $('form').submit(function(e) {
                         <ul>
                           <div class="collapse" id="errata${objectId}" aria-expanded="false">
                             <div class="card card-block">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                            <div id="rulezTableDiv">
+                            <br>
+                                <table id="rulezTable" border="1">
+                                    <tr>
+                                        <td>ID</td>
+                                        <td>Card Title</td>
+                                        <td>Card Text</td>
+                                        <td>Card Ruling</td>
+                                        <td>Delete?</td>
+                                        <td>Add Rows?</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+
+                                        <td><input size=25 type="text" class="textFields" id="title"/></td>
+
+                                        <td><input size=25 type="text" id="ruleText" class="textFields"/></td>
+
+                                        <td><input size=25 type="text" id="rulingText" class="textFields"/></td>
+
+                                        <td><input type="button" id="delbutton" class="textFields" value="Delete" onclick="deleteRow(this)"/></td>
+
+                                        <td><input type="button" id="addmorebutton" class="textFields" value="Add More Errata" onclick="insRow()"/></td>
+                                    </tr>
+                                </table>
+                            </div>
                             </div>
                           </div>
                         </ul>
                     </div>
                 </div>`));
-                $('.errata${objectId}').collapse("hide");
-                $('.rulez${objectId}').collapse("hide");
+                // $(document).ready(function() {
+                //   $('.rulez-collapse').collapse("hide");
+                //   $('.errata-collapse').collapse("hide");
+                // });
             });
         });
     });
 });
 
-$(document).ready(function() {
-    $("#add").click(function() {
-      $('#mytable tbody>tr:last').clone(true).insertAfter('#mytable tbody>tr:last');
-      return false;
-    });
-});
+function deleteRow(row)
+{
+    var i=row.parentNode.parentNode.rowIndex;
+    document.getElementById('rulezTable').deleteRow(i);
+}
+
+
+function insRow()
+{
+    console.log( 'hi');
+    var x=document.getElementById('rulezTable');
+    var new_row = x.rows[1].cloneNode(true);
+    var len = x.rows.length;
+    new_row.cells[0].innerHTML = len;
+
+    var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
+    inp1.id += len;
+    inp1.value = '';
+    var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
+    inp2.id += len;
+    inp2.value = '';
+    x.appendChild( new_row );
+}

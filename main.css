@@ -87,10 +87,10 @@ footer {
     width: 0px;
     float: Left;
     margin-left: 210px;
-    -webkit-transition: all 0.7s ease-out;
-    -moz-transition: all 0.7s ease-out;
-    -o-transition: all 0.7s ease-out;
-    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
     height: 30px;
     line-height: 18px;
     padding: 0 2px 0 2px;
@@ -129,4 +129,16 @@ a.rulez-collapse  {
 
 a.errata-collapse  {
   text-decoration: underline;
+}
+#footer {
+position: sticky;
+}
+
+.pagination {
+  position: sticky;
+  bottom: 0;
+}
+
+.textFields button, input, optgroup, select, textarea {
+  color: black;
 }
