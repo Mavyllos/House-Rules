@@ -9,7 +9,7 @@
 //   // result is your json object
 // })
 
-var corsApi = 'http://galvanize-cors-proxy.herokuapp.com/';
+var corsApi = 'https://galvanize-cors-proxy.herokuapp.com/';
 var searchResultJSON;
 $('form').submit(function(e) {
     e.preventDefault();
@@ -193,27 +193,3 @@ $('form').submit(function(e) {
         });
     });
 });
-
-// function deleteRow(row)
-// {
-//     var i=row.parentNode.parentNode.rowIndex;
-//     document.getElementById('rulezTable').deleteRow(i);
-// }
-//
-//
-// function insRow()
-// {
-//     console.log( 'hi');
-//     var x=document.getElementById('rulezTable');
-//     var new_row = x.rows[1].cloneNode(true);
-//     var len = x.rows.length;
-//     new_row.cells[0].innerHTML = len;
-//
-//     var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
-//     inp1.id += len;
-//     inp1.value = '';
-//     var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
-//     inp2.id += len;
-//     inp2.value = '';
-//     x.appendChild( new_row );
-// }
