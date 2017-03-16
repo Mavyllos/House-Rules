@@ -72,111 +72,148 @@ $('form').submit(function(e) {
 
                 $(".games-row").prepend($(`
                   <div class="col-xs-8 portfolio-item">
-                    <a href="#">
-                        <img class="img-responsive" src="http:${thumbnailImg}" alt="">
-                    </a>
-                    <h4>
-                      <a href="#" class="game-name">${gameName}</a>
-                    </h4>
-                    <div class="game-data">
-                        <p class="players"><strong>Suggested Players -</strong> <br><span>Min :</span> ${minPlayers} <br><span>Max :</span> ${maxPlayers}
-                        </p>
-                        <p class="play-time"><strong>Play Time: </strong> <br> ${playingTime}
-                        </p>
-                        <a class="rulez-collapse" data-toggle="collapse" href="#rulez${objectId}" aria-expanded="false" aria-controls="rulez${objectId}"> View, Add, or Edit Rulez </a>
-                        <ul>
-                          <div class="rulez collapse" id="rulez${objectId}" aria-expanded="false">
-                            <div class="card card-block">
-                            <div id="rulezTableDiv">
-                            <br>
-                                <table id="rulezTable" border="1">
-                                    <tr>
-                                        <td>ID</td>
-                                        <td>Rule Title</td>
-                                        <td>Rule Text</td>
-                                        <td>Delete?</td>
-                                        <td>Add Rows?</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-
-                                        <td><input size=25 type="text" id="title" class="textFields"/></td>
-
-                                        <td><input size=25 type="text" id="ruleText" class="textFields"/></td>
-
-                                        <td><input type="button" id="delbutton" value="Delete" class="textFields" onclick="deleteRow(this)"/></td>
-
-                                        <td><input type="button" id="addmorebutton" class="textFields" value="Add More Rulez" onclick="insRow()"/></td>
-                                    </tr>
-                                </table>
-                            </div>
-                            </div>
-                          </div>
-                        </ul>
-                        <a class="errata-collapse" data-toggle="collapse" href="#errata${objectId}" aria-expanded="false" aria-controls="errata${objectId}"> View, Add, or Edit Errata </a>
-                        <ul>
-                          <div class="collapse" id="errata${objectId}" aria-expanded="false">
-                            <div class="card card-block">
-                            <div id="rulezTableDiv">
-                            <br>
-                                <table id="rulezTable" border="1">
-                                    <tr>
-                                        <td>ID</td>
-                                        <td>Card Title</td>
-                                        <td>Card Text</td>
-                                        <td>Card Ruling</td>
-                                        <td>Delete?</td>
-                                        <td>Add Rows?</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-
-                                        <td><input size=25 type="text" class="textFields" id="title"/></td>
-
-                                        <td><input size=25 type="text" id="ruleText" class="textFields"/></td>
-
-                                        <td><input size=25 type="text" id="rulingText" class="textFields"/></td>
-
-                                        <td><input type="button" id="delbutton" class="textFields" value="Delete" onclick="deleteRow(this)"/></td>
-
-                                        <td><input type="button" id="addmorebutton" class="textFields" value="Add More Errata" onclick="insRow()"/></td>
-                                    </tr>
-                                </table>
-                            </div>
-                            </div>
-                          </div>
-                        </ul>
-                    </div>
-                </div>`));
-                // $(document).ready(function() {
-                //   $('.rulez-collapse').collapse("hide");
-                //   $('.errata-collapse').collapse("hide");
-                // });
+                      <a href="#">
+                          <img class="img-responsive" src="http:${thumbnailImg}" alt="">
+                      </a>
+                      <h4>
+                        <a href="#" class="game-name">${gameName}</a>
+                      </h4>
+                      <div class="game-data">
+                          <p class="players"><strong>Suggested Players -</strong> <br><span>Min :</span> ${minPlayers} <br><span>Max :</span> ${maxPlayers}
+                          </p>
+                          <p class="play-time"><strong>Play Time: </strong> <br> ${playingTime}
+                          </p>
+                          <a class="rulez-collapse" data-toggle="collapse" href="#rulez${objectId}" aria-expanded="false" aria-controls="rulez${objectId}"> View, Add, or Edit Rulez </a>
+                          <ul>
+                              <div class="rulez collapse" id="rulez${objectId}" aria-expanded="false">
+                                  <div class="card card-block">
+                                      <!-- collapse data goes here  -->
+                                      <br>
+                                      <div class="panel-group" id="accordionRulez${objectId}" role="tablist" aria-multiselectable="true">
+                                          <div class="panel panel-default">
+                                              <div class="panel-heading" role="tab" id="headingOne">
+                                                  <h2 class="panel-title">
+                                          <a role="button" data-toggle="collapse" data-parent="#accordionRulez${objectId}" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Add a New Rule
+                                          </a>
+                                        </h2>
+                                              </div>
+                                              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                  <div class="panel-body">
+                                                      <form action="#">
+                                                          <div class="row">
+                                                              <div class="col-md-3">
+                                                                  <div class="form-group form-group-sm">
+                                                                      <label for="ruleTitle" class="control-label">Rule  Title</label>
+                                                                      <input type="text" class="form-control" id="ruleTitle" placeholder="Enter Rule Title">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                  <div class="form-group">
+                                                                      <label for="ruleCategory" class="control-label">Rule Category</label>
+                                                                      <textarea class="form-control" id="ruleCategory" placeholder="Enter Rule Category"></textarea>
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                  <div class="form-group">
+                                                                      <label for="ruleText" class="control-label">Rule Text</label>
+                                                                      <textarea class="form-control" id="ruleText" placeholder="Enter Rule Text"></textarea>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <div class="row">
+                                                              <div class="col-xs-3">
+                                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                                              </div>
+                                                          </div>
+                                                      </form>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- collapse data ends -->
+                          </ul>
+                          <a class="errata-collapse" data-toggle="collapse" href="#errata${objectId}" aria-expanded="false" aria-controls="errata${objectId}"> View, Add, or Edit Errata </a>
+                          <ul>
+                              <div class="collapse" id="errata${objectId}" aria-expanded="false">
+                                  <div class="card card-block">
+                                      <!-- collapse data goes here  -->
+                                      <br>
+                                      <div class="panel-group" id="accordionErrata${objectId}" role="tablist" aria-multiselectable="true">
+                                          <div class="panel panel-default">
+                                              <div class="panel-heading" role="tab" id="headingTwo">
+                                                  <h2 class="panel-title">
+                                          <a role="button" data-toggle="collapse" data-parent="#accordionErrata${objectId}" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            Add New Errata
+                                          </a>
+                                        </h2>
+                                              </div>
+                                              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                  <div class="panel-body">
+                                                      <form action="#">
+                                                          <div class="row">
+                                                              <div class="col-md-3">
+                                                                  <div class="form-group form-group-sm">
+                                                                      <label for="errataTitle" class="control-label">Card  Title</label>
+                                                                      <input type="text" class="form-control" id="errataTitle" placeholder="Enter Card Name">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                  <div class="form-group">
+                                                                      <label for="cardText" class="control-label">Card  Text</label>
+                                                                      <textarea class="form-control" id="cardText" placeholder="Enter Card Text"></textarea>
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                  <div class="form-group">
+                                                                      <label for="cardRuling" class="control-label">Card Ruling</label>
+                                                                      <textarea class="form-control" id="cardRuling" placeholder="Enter Card Ruling"></textarea>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <div class="row">
+                                                              <div class="col-xs-3">
+                                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                                              </div>
+                                                          </div>
+                                                      </form>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- collapse data ends -->
+                          </ul>
+                      </div>
+                  </div>`));
             });
         });
     });
 });
 
-function deleteRow(row)
-{
-    var i=row.parentNode.parentNode.rowIndex;
-    document.getElementById('rulezTable').deleteRow(i);
-}
-
-
-function insRow()
-{
-    console.log( 'hi');
-    var x=document.getElementById('rulezTable');
-    var new_row = x.rows[1].cloneNode(true);
-    var len = x.rows.length;
-    new_row.cells[0].innerHTML = len;
-
-    var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
-    inp1.id += len;
-    inp1.value = '';
-    var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
-    inp2.id += len;
-    inp2.value = '';
-    x.appendChild( new_row );
-}
+// function deleteRow(row)
+// {
+//     var i=row.parentNode.parentNode.rowIndex;
+//     document.getElementById('rulezTable').deleteRow(i);
+// }
+//
+//
+// function insRow()
+// {
+//     console.log( 'hi');
+//     var x=document.getElementById('rulezTable');
+//     var new_row = x.rows[1].cloneNode(true);
+//     var len = x.rows.length;
+//     new_row.cells[0].innerHTML = len;
+//
+//     var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
+//     inp1.id += len;
+//     inp1.value = '';
+//     var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
+//     inp2.id += len;
+//     inp2.value = '';
+//     x.appendChild( new_row );
+// }
