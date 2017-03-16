@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>House Rules</title>
+        <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2013/07/12/19/33/ludo-154989_960_720.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-D9XILkoivXN+bcvB2kSOowkIvIcBbNdoDQvfBNsxYAIieZbx8/SI4NeUvrRGCpDi" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://use.fontawesome.com/9ad6ed107e.js"></script>
+        <!-- Jquery -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script defer src="./xml2json.js" charset="utf-8"></script>
+        <script defer src="main.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <!-- Navigation -->
+            <nav class="navbar sticky-top navbar-inverse bg-inverse" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="index.html">
+                            <img src="Logomakr_6PZ4We.png" alt="House Rules" class="d-inline-block align-top" height="75" width="150" id="home-logo">
+                        </a>
+                        <ul class="nav navbar-nav navbar-right">
+                            <div class="container">
+                                <form class="search">
+                                    <input type="text" class="form-control input-sm" maxlength="64" placeholder="Game Name:" />
+                                    <button type="submit" class="btn btn-primary btn-sm">Search Games</button>
+                                </form>
+                            </div>
+                        </ul>
+
+                        <!-- Modal -->
+                        <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title">Add  game to collection</h4>
+                                    </div>
+                                    <div class="modal-body message-edit-text">
+
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+                            <!--end of modal-->
+                            <!--hamburger menu for later use-->
+                            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      </button> -->
+                        </div>
+                    </div>
+            </nav>
+        </header>
+        <main>
+
+            <!-- Page Content -->
+            <div class="container">
+
+                <!-- Page Header -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="page-header">My Games
+                  </h1>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <!-- Games Row -->
+                <div class="row games-row">
+                    <!-- <div class="col-xs-8 portfolio-item">
+                        <a href="#">
+                            <img class="img-responsive" src="http://placehold.it/150x150" alt="">
+                        </a>
+                        <h4>
+                      <a href="#" class="game-name">Game Name</a>
+                    </h4>
+                        <p class="game-data">
+                            <p class="players">Suggested Players:
+                                <span></span>
+                            </p>
+                            <p class="play-time">Play Time:
+                                <span></span>
+                            </p>
+                            <p>
+                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                Show Rulez and Errata
+              </button>
+                            </p>
+                            <div class="collapse" id="collapse1">
+                                <div class="card card-block">
+                                    <p class="rulez">Rulez <span></span></p>
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                    <p class="errata">Errata <span></span></p>
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </p>
+                    </div> -->
+                </div>
+                <!-- /.row -->
+
+                <hr>
+
+                <!-- Pagination -->
+                <div class="row text-center">
+                    <div class="col-xs-12">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#">&laquo;</a>
+                            </li>
+                            <li class="active">
+                                <a href="#">1</a>
+                            </li>
+                            <!-- Add new pages as needed-->
+                            <!-- <li>
+                                <a href="#">2</a>
+                            </li> -->
+
+                            <li>
+                                <a href="#">&raquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <hr>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; House Rulez 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+        <!-- /.container -->
+
+    </body>
+
+</html>

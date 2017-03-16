@@ -1,0 +1,132 @@
+html {
+  color: black;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+.portfolio-item img {
+  padding: 15px;
+  float: right;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+/*.rulez {
+  color: rgb(60, 226, 52);
+}*/
+
+/*.rulez span {
+  color: white;
+}*/
+
+/*.errata {
+  color: #f28615;
+}*/
+
+/*.errata span {
+  color: white;
+}*/
+
+/*.players {
+  color: rgb(210, 30, 232);
+}*/
+
+/*.players span {
+  color: white;
+}*/
+
+/*.players strong {
+  color: white;
+}*/
+
+/*.play-time {
+  color: rgb(51, 179, 191);
+}*/
+
+/*.play-time span {
+  color: white;
+}*/
+
+/*.play-time strong {
+  color: white;
+}*/
+
+/*.game-name {
+  color: rgb(209, 227, 232);
+}*/
+
+#home-logo {
+  padding: 5px;
+}
+
+
+#search {
+    float: right;
+    margin-top: 9px;
+    width: 250px;
+}
+
+.search {
+    padding: 20px 0px;
+    width: 300px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    float: right;
+    line-height: 22px;
+}
+
+.search input {
+    position: absolute;
+    width: 0px;
+    float: Left;
+    margin-left: 210px;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    height: 30px;
+    line-height: 18px;
+    padding: 0 2px 0 2px;
+    border-radius:4px 0 0 4px;
+}
+
+.search:hover input, .search input:focus {
+    width: 200px;
+    margin-left: 0px;
+}
+
+.search .btn {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border-radius:4px;
+}
+
+.search:hover  .btn {
+  border-radius: 0 4px 4px 0;
+}
+
+.btn-xs {
+/*margin-left: 50px; */
+  float: right;
+}
+
+.modal-body {
+  color: white;
+}
+
+a.rulez-collapse  {
+  text-decoration: underline;
+}
+
+a.errata-collapse  {
+  text-decoration: underline;
+}
