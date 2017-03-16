@@ -73,7 +73,7 @@ $('form').submit(function(e) {
                 $(".games-row").prepend($(`
                   <div class="col-xs-8 portfolio-item">
                       <a href="#">
-                          <img class="img-responsive" src="http:${thumbnailImg}" alt="">
+                          <img class="img-responsive" src="https:${thumbnailImg}" alt="">
                       </a>
                       <h4>
                         <a href="#" class="game-name">${gameName}</a>
