@@ -50,7 +50,7 @@ $('form').submit(function(e) {
                 var parser = new X2JS();
                 idResult = parser.xml2json(idResult);
                 // console.log(idResult);
-                // console.log(JSON.stringify(idResult));
+                console.log(JSON.stringify(idResult));
                 // console.log(idResult.boardgames.boardgame);
 
                 var thumbnailImg = idResult.boardgames.boardgame.thumbnail;
@@ -72,11 +72,11 @@ $('form').submit(function(e) {
                 }
                 $(".games-row").prepend($(`
                   <div class="col-xs-8 portfolio-item">
-                      <a href="#">
+                      <a href='https://boardgamegeek.com/boardgame/${objectId}' target='_blank'>
                           <img class="img-responsive" src="https:${thumbnailImg}" alt="">
                       </a>
                       <h4>
-                        <a href="#" class="game-name">${gameName}</a>
+                        <a href='https://boardgamegeek.com/boardgame/${objectId}' target='_blank' class="game-name">${gameName}</a>
                       </h4>
                       <div class="game-data">
                           <p class="players"><strong>Suggested Players -</strong> <br><span>Min :</span> ${minPlayers} <br><span>Max :</span> ${maxPlayers}
