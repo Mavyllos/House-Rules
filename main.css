@@ -4,6 +4,10 @@ html {
   font-size: 16px;
 }
 
+ {
+  background-color: black;
+}
+
 .portfolio-item {
     margin-bottom: 25px;
 }
@@ -65,55 +69,6 @@ footer {
   padding: 5px;
 }
 
-
-#search {
-    float: right;
-    margin-top: 9px;
-    width: 250px;
-}
-
-.search {
-    padding: 20px 0px;
-    width: 300px;
-    height: 30px;
-    position: relative;
-    left: 10px;
-    float: right;
-    line-height: 22px;
-}
-
-.search input {
-    position: absolute;
-    width: 0px;
-    float: Left;
-    margin-left: 210px;
-    -webkit-transition: all 0.7s ease-in-out;
-    -moz-transition: all 0.7s ease-in-out;
-    -o-transition: all 0.7s ease-in-out;
-    transition: all 0.7s ease-in-out;
-    height: 30px;
-    line-height: 18px;
-    padding: 0 2px 0 2px;
-    border-radius:4px 0 0 4px;
-}
-
-.search:hover input, .search input:focus {
-    width: 200px;
-    margin-left: 0px;
-}
-
-.search .btn {
-    height: 30px;
-    position: absolute;
-    right: 0;
-    top: 20px;
-    border-radius:4px;
-}
-
-.search:hover  .btn {
-  border-radius: 0 4px 4px 0;
-}
-
 .btn-xs {
 /*margin-left: 50px; */
   float: right;
@@ -142,3 +97,94 @@ position: sticky;
 .textFields button, input, optgroup, select, textarea {
   color: black;
 }
+
+.games-row h6 {
+  text-align: center;
+  color: #5785a6;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+}
+
+.search {
+    padding: 20px 0px;
+    width: 300px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    float: right;
+    line-height: 23px;
+}
+
+.search .btn {
+    height: 30px;
+    right: 0;
+    top: 20px;
+    border-radius:5px;
+}
+
+li {
+  list-style: none;
+}
+
+/*float out search features*/
+/*@media (min-width: 250px) {
+  #search {
+      float: right;
+      margin-top: 9px;
+      width: 250px;
+  }
+
+  .search {
+      padding: 20px 0px;
+      width: 300px;
+      height: 30px;
+      position: relative;
+      left: 10px;
+      float: right;
+      line-height: 22px;
+  }
+
+  .search input {
+      position: absolute;
+      width: 0px;
+      float: Left;
+      margin-left: 210px;
+      -webkit-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.7s ease-in-out;
+      -o-transition: all 0.7s ease-in-out;
+      transition: all 0.7s ease-in-out;
+      height: 30px;
+      line-height: 18px;
+      padding: 0 2px 0 2px;
+      border-radius:4px 0 0 4px;
+  }
+
+  .search:hover input, .search input:focus {
+      width: 200px;
+      margin-left: 0px;
+  }
+
+  .search .btn {
+      height: 30px;
+      position: absolute;
+      right: 0;
+      top: 20px;
+      border-radius:4px;
+  }
+
+  .search:hover  .btn {
+    border-radius: 0 4px 4px 0;
+  }
+}*/

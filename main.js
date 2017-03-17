@@ -35,6 +35,7 @@ $('form').submit(function(e) {
         }
 
         $("#myModal").modal('show');
+        $(".games-row").empty();
 
         $('.gameinfo').on('click', function(e) {
             e.preventDefault();
@@ -69,7 +70,6 @@ $('form').submit(function(e) {
                 } else {
                   gameName = idResult.boardgames.boardgame.name.__text;
                 }
-
                 $(".games-row").prepend($(`
                   <div class="col-xs-8 portfolio-item">
                       <a href="#">
@@ -85,6 +85,7 @@ $('form').submit(function(e) {
                           </p>
                           <a class="rulez-collapse" data-toggle="collapse" href="#rulez${objectId}" aria-expanded="false" aria-controls="rulez${objectId}"> View, Add, or Edit Rulez </a>
                           <ul>
+                          <li>
                               <div class="rulez collapse" id="rulez${objectId}" aria-expanded="false">
                                   <div class="card card-block">
                                       <!-- collapse data goes here  -->
@@ -93,18 +94,18 @@ $('form').submit(function(e) {
                                           <div class="panel panel-default">
                                               <div class="panel-heading" role="tab" id="headingOne">
                                                   <h2 class="panel-title">
-                                          <a role="button" data-toggle="collapse" data-parent="#accordionRulez${objectId}" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          <a role="button" data-toggle="collapse" data-parent="#accordionRulez${objectId}" href="#collapseRulez${objectId}" aria-expanded="true" aria-controls="collapseRulez${objectId}">
                                             Add a New Rule
                                           </a>
                                         </h2>
                                               </div>
-                                              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                              <div id="collapseRulez${objectId}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                                   <div class="panel-body">
                                                       <form action="#">
                                                           <div class="row">
                                                               <div class="col-md-3">
                                                                   <div class="form-group form-group-sm">
-                                                                      <label for="ruleTitle" class="control-label">Rule  Title</label>
+                                                                      <label for="ruleTitle" class="control-label">Rule Title</label>
                                                                       <input type="text" class="form-control" id="ruleTitle" placeholder="Enter Rule Title">
                                                                   </div>
                                                               </div>
@@ -133,10 +134,12 @@ $('form').submit(function(e) {
                                       </div>
                                   </div>
                               </div>
+                              </li>
                               <!-- collapse data ends -->
                           </ul>
                           <a class="errata-collapse" data-toggle="collapse" href="#errata${objectId}" aria-expanded="false" aria-controls="errata${objectId}"> View, Add, or Edit Errata </a>
                           <ul>
+                          <li>
                               <div class="collapse" id="errata${objectId}" aria-expanded="false">
                                   <div class="card card-block">
                                       <!-- collapse data goes here  -->
@@ -145,24 +148,24 @@ $('form').submit(function(e) {
                                           <div class="panel panel-default">
                                               <div class="panel-heading" role="tab" id="headingTwo">
                                                   <h2 class="panel-title">
-                                          <a role="button" data-toggle="collapse" data-parent="#accordionErrata${objectId}" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                          <a role="button" data-toggle="collapse" data-parent="#accordionErrata${objectId}" href="#collapseErrata${objectId}" aria-expanded="true" aria-controls="collapseErrata${objectId}">
                                             Add New Errata
                                           </a>
                                         </h2>
                                               </div>
-                                              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                              <div id="collapseErrata${objectId}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                                   <div class="panel-body">
                                                       <form action="#">
                                                           <div class="row">
                                                               <div class="col-md-3">
                                                                   <div class="form-group form-group-sm">
-                                                                      <label for="errataTitle" class="control-label">Card  Title</label>
+                                                                      <label for="errataTitle" class="control-label">Card Title</label>
                                                                       <input type="text" class="form-control" id="errataTitle" placeholder="Enter Card Name">
                                                                   </div>
                                                               </div>
                                                               <div class="col-md-3">
                                                                   <div class="form-group">
-                                                                      <label for="cardText" class="control-label">Card  Text</label>
+                                                                      <label for="cardText" class="control-label">Card Text</label>
                                                                       <textarea class="form-control" id="cardText" placeholder="Enter Card Text"></textarea>
                                                                   </div>
                                                               </div>
