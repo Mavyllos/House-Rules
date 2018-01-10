@@ -1,7 +1,7 @@
 # House Rules
 House Rules - Don't be limited by the rules! House Rules gives you a place to track your board game house rules. Built as a solo project for the Galvanize Web Development Immersive Program. 
 
-# House Rules - G48 Quarter 1 Project
+# G48 Quarter 1 Project
 
 ## What is House Rules?
 
@@ -33,8 +33,6 @@ Users can quickly add a new game to their collection, delete a game from their c
 * CSS
 * JavaScript
 * JQuery
-* Express.js
-* Node.js
 * BoardGameGeek API
 
 ## Developed By:
