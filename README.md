@@ -1,5 +1,5 @@
 # House Rules
-House Rules - Don't be limited by the rules! House Rules gives you a place to track your board game house rules. Built as a solo project for the Galvanize Web Development Immersive Program. 
+Don't be limited by the rules! House Rules gives you a place to track your board game house rules. Built as a solo project for the Galvanize Web Development Immersive Program. 
 
 # G48 Quarter 1 Project
 
@@ -14,19 +14,19 @@ As my family and friends are huge fans of board gaming, the idea of House Rules 
 Users can quickly add a new game to their collection, delete a game from their collection,  and add, edit, or delete in their own rules and errata for a game in their collection.
 
 #### Homepage
-![](/www/img/hr-homepage.png)
+![](/img/hr-homepage.png)
 
 #### New Game Selection
-![](/www/img/hr-add-game.png)
+![](/img/hr-add-game.png)
 
 #### Dashboard
-![](/www/img/hr-collections.png)
+![](/img/hr-collections.png)
 
 #### Add Rules
-![](/www/img/hr-add-rule1.png)
+![](/img/hr-add-rule1.png)
 
 #### Add Errata
-![](/www/img/hr-add-errata.png)
+![](/img/hr-add-errata.png)
 
 ## Technologies
 * HTML
